@@ -4,7 +4,6 @@
   "description": "react without jsx. just use javascript.",
   "main": "index.js",
   "dependencies": {
-    "lodash.clone": "^4.0.1",
     "react": "^0.14.6",
     "react-dom": "^0.14.6"
   },

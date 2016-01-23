@@ -1,35 +1,35 @@
 module.exports = {
-  self: 'div',
-  className: 'renderer__header',
+  type: 'div',
+  props: { className: 'renderer__header' },
   children: [
     {
-      self: 'h1',
-      className: 'renderer__title',
+      type: 'h1',
+      props: { className: 'renderer__title' },
       children: 'React Json renderer'
     },
     {
-      self: 'ul',
-      className: 'renderer__menu',
+      type: 'ul',
+      props: { className: 'renderer__menu' },
       children: [
         {
-          self: 'li',
-          className: 'renderer__menu__li',
+          type: 'li',
+          props: { className: 'renderer__menu__li' },
           children: {
-            self: 'a',
-            href: '#',
+            type: 'a',
+            props: { href: '#' },
             children: 'some menu',
           }
         },
         {
-          self: 'li',
-          className: 'renderer__menu__li',
+          type: 'li',
+          props: { className: 'renderer__menu__li' },
           children: {
-            self: 'a',
-            href: '#',
+            type: 'a',
+            props: { href: '#' },
             children: 'some menu 2',
           }
         }
       ]
     }
   ]
-}
+};

@@ -1,7 +1,13 @@
+'use strict';
+
+var RJT = require('lib/ReactJsonTemplater');
+var Header = require('components/header.js');
+
+
 module.exports = {
-  self: 'div',
-  className: 'renderer',
+  type: 'div',
+  props: { className: 'renderer' },
   children: [
-    require('templates/header.js')
+    {type: Header}
   ]
-}
+};
