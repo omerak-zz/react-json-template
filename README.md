@@ -6,6 +6,10 @@ You can create your react view without jsx with this tool. It's simply writing h
 
 
 # Simple Template
+
+You have three keys to type. Type, props and children. Type accepts html tags or components.
+Props and children are the same as react
+
 ```
 var Header = require('components/header.js');
 
@@ -67,3 +71,6 @@ module.exports = React.createClass({
 });
 ```
 
+Note: It's not ready to use for dynamic applications. It's an idea and it has to be developed.
+
+Any suggestions are wellcome.
