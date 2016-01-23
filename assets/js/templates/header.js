@@ -18,7 +18,6 @@ module.exports = {
             type: 'a',
             props: {
               href: '#',
-              onClick: arg.click
             },
             children: 'some menu',
           }

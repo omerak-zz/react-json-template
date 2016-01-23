@@ -6,9 +6,11 @@ var React = require('react');
 var ReactJsonTemplater = function(dom) {
   if (Array.isArray(dom)) {
     return dom.map(function(element, idx) {
-      if (!element.key) {
-        element.key = idx;
-      }
+      if (!element.props)
+        element.props = {};
+      if (!element.props.key)
+        element.props.key = idx;
+
       return ReactJsonTemplater(element)
     });
   } else if (typeof dom == 'object') {
