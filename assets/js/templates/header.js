@@ -16,7 +16,10 @@ module.exports = {
           props: { className: 'renderer__menu__li' },
           children: {
             type: 'a',
-            props: { href: '#' },
+            props: {
+              href: '#',
+              onClick: arg.click
+            },
             children: 'some menu',
           }
         },

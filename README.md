@@ -3,6 +3,7 @@
 
 You can create your react view without jsx with this tool. It's simply writing html with json.
 
+For seeing the result add clone the project, run "npm run build" command and open index.html
 
 
 # Simple Template
