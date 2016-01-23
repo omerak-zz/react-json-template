@@ -1,0 +1,29 @@
+{
+  "name": "react-json-renderer",
+  "version": "1.0.0",
+  "description": "react without jsx. just use javascript.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.0",
+    "gulp-notify": "^2.2.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omerak/react-json-renderer.git"
+  },
+  "keywords": [
+    "react",
+    "template",
+    "json",
+    "renderer"
+  ],
+  "author": "Omer Ak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omerak/react-json-renderer/issues"
+  },
+  "homepage": "https://github.com/omerak/react-json-renderer#readme"
+}
