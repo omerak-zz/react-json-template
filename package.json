@@ -1,8 +1,8 @@
 {
-  "name": "react-json-renderer",
-  "version": "1.0.0",
+  "name": "react-json-templater",
+  "version": "0.0.1",
   "description": "react without jsx. just use javascript.",
-  "main": "index.js",
+  "main": "assets/js/lib/ReactJsonTemplater.js",
   "dependencies": {
     "react": "^0.14.6",
     "react-dom": "^0.14.6"
