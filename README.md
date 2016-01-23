@@ -134,6 +134,27 @@ module.exports = React.createClass({
 });
 ```
 
+mixin way
+```
+var React = require('react');
+var RJT = require('lib/ReactJsonTemplater');
+var headerTemplate = require('templates/header.js');
+
+
+module.exports = React.createClass({
+  mixins: [headerTemplate],
+
+  onClick: function(e) {
+    e.preventDefault()
+    alert('you can use state in that way');
+  },
+
+  render: function() {
+    return RJT(this.template());
+  }
+});
+```
+
 
 Note: It's just an idea to write react without jsx, and I know it needs to be reviewed and developed
 
