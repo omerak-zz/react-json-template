@@ -20,7 +20,7 @@ module.exports = React.createClass({
     'rjt',
   ],
 
-  renderData: function(item, idx) {
+  renderWord: function(item, idx) {
     return {
       type: 'span',
       children: item,
@@ -60,7 +60,7 @@ module.exports = React.createClass({
                     href: '#',
                     onClick: that.onClick
                   },
-                  children: that.words.map(that.renderData),
+                  children: that.words.map(that.renderWord),
                 }
               },
               {
