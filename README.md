@@ -1,15 +1,14 @@
-# React-Json-Templaterr
+# React-Json-Template
 
 
-You can create your react view without jsx with this tool. It's simply writing html with json.
-
-For seeing the result add clone the project, run "npm run build" command and open index.html
+You can create your react view without jsx with this tool. It's simply writing html in json.
 
 
-# Simple Template
 
-You have three keys to type. Type, props and children. Type accepts html tags or components.
-Props and children are the same as react
+# Simple Usage
+
+You have three optional keys to type. Type, props and children. Type accepts html tags or components.
+Props and children are the same as react.
 
 
 ```
