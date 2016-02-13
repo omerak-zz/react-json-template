@@ -1,4 +1,4 @@
-# React-Json-Renderer
+# React-Json-Templaterr
 
 
 You can create your react view without jsx with this tool. It's simply writing html with json.
