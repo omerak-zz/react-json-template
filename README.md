@@ -11,151 +11,97 @@ For seeing the result add clone the project, run "npm run build" command and ope
 You have three keys to type. Type, props and children. Type accepts html tags or components.
 Props and children are the same as react
 
+
 ```
+var React = require('react');
+var rjt = require('rjt');
+
+
+module.exports = React.createClass({
+  data: [
+    'lorem',
+    'ipsum',
+    'dolor',
+    'sit',
+    'amet'
+  ],
+
+  renderData: function(item, idx) {
+    return {
+      type: 'span',
+      children: item,
+      key: idx
+    }
+  },
+
+  onClick: function(e) {
+    e.preventDefault()
+    alert('you can use state in that way');
+  },
+
+  render: function() {
+    var that = this;
+
+    return rjt(
+      {
+        type: 'div',
+        props: { className: 'renderer__header' },
+        children: [
+          {
+            type: 'h1',
+            props: { className: 'renderer__title' },
+            children: 'React Json renderer'
+          },
+          {
+            type: 'ul',
+            props: { className: 'renderer__menu' },
+            children: [
+              {
+                type: 'li',
+                props: { className: 'renderer__menu__li' },
+                children: {
+                  type: 'a',
+                  props: {
+                    href: '#',
+                    onClick: that.onClick
+                  },
+                  children: that.data.map(that.renderData),
+                }
+              },
+              {
+                type: 'li',
+                props: { className: 'renderer__menu__li' },
+                children: {
+                  type: 'a',
+                  props: { href: '#' },
+                  children: 'some menu 2',
+                }
+              }
+            ]
+          }
+        ]
+      }
+    );
+  }
+});
+```
+
+```
+var rjt = require('lib/rjt');
 var Header = require('components/header.js');
+
 
 module.exports = {
   type: 'div',
   props: { className: 'renderer' },
   children: [
-    {type: Header} // You can use component as a type
+    {type: Header}, // You can use component as a type
+    'lorem', // 'you can use string or array as a child.'
+    [
+      'asdasd',
+      'asdasdasd',
+      {type: 'div', children: 'asdasd'}
+    ]
   ]
 };
 ```
-
-```
-module.exports = {
-  type: 'div',
-  props: { className: 'renderer__header' },
-  children: [
-    {
-      type: 'h1',
-      props: { className: 'renderer__title' },
-      children: 'React Json renderer'
-    },
-    {
-      type: 'ul',
-      props: { className: 'renderer__menu' },
-      children: [
-        {
-          type: 'li',
-          props: { className: 'renderer__menu__li' },
-          children: {
-            type: 'a',
-            props: { href: '#' },
-            children: 'some menu',
-          }
-        },
-        {
-          type: 'li',
-          props: { className: 'renderer__menu__li' },
-          children: {
-            type: 'a',
-            props: { href: '#' },
-            children: 'some menu 2',
-          }
-        }
-      ]
-    }
-  ]
-};
-```
-
-You can run your static templates just that easy.
-```
-var rjt = require('rjt');
-
-module.exports = React.createClass({
-  render: function() {
-    return rjt(require('templates/header.js'));
-  }
-});
-```
-
-
-or in this way or with using mixin you can run your dynamic templates.
-```
-var React = require('react');
-var rjt = require('rjt');
-
-
-module.exports = React.createClass({
-  template: function() {
-    var that = this;
-
-    return {
-      type: 'div',
-      props: { className: 'renderer__header' },
-      children: [
-        {
-          type: 'h1',
-          props: { className: 'renderer__title' },
-          children: 'React Json renderer'
-        },
-        {
-          type: 'ul',
-          props: { className: 'renderer__menu' },
-          children: [
-            {
-              type: 'li',
-              props: { className: 'renderer__menu__li' },
-              children: {
-                type: 'a',
-                props: {
-                  href: '#',
-                  onClick: that.onClick
-                },
-                children: 'some menu',
-              }
-            },
-            {
-              type: 'li',
-              props: { className: 'renderer__menu__li' },
-              children: {
-                type: 'a',
-                props: { href: '#' },
-                children: 'some menu 2',
-              }
-            }
-          ]
-        }
-      ]
-    }
-  },
-
-  onClick: function(e) {
-    e.preventDefault()
-    alert('you can use state in that way');
-  },
-
-  render: function() {
-    return rjt(this.template());
-  }
-});
-```
-
-mixin way
-```
-var React = require('react');
-var rjt = require('rjt');
-var headerTemplate = require('templates/header.js');
-
-
-module.exports = React.createClass({
-  mixins: [headerTemplate],
-
-  onClick: function(e) {
-    e.preventDefault()
-    alert('you can use state in that way');
-  },
-
-  render: function() {
-    return rjt(this.template());
-  }
-});
-```
-
-
-Note: It's just an idea to write react without jsx, and I know it needs to be reviewed and developed
-
-So, any suggestions are very wellcome.
