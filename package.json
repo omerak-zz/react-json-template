@@ -1,6 +1,6 @@
 {
   "name": "rjt",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "react without jsx. just use javascript.",
   "main": "assets/js/lib/rjt.js",
   "dependencies": {
