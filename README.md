@@ -12,17 +12,12 @@ Props and children are the same as react.
 
 
 ```
-var React = require('react');
-var rjt = require('rjt');
-
-
 module.exports = React.createClass({
-  data: [
-    'lorem',
-    'ipsum',
-    'dolor',
-    'sit',
-    'amet'
+  words: [
+    'How ',
+    'to ',
+    'use ',
+    'rjt',
   ],
 
   renderData: function(item, idx) {
@@ -30,7 +25,8 @@ module.exports = React.createClass({
       type: 'span',
       children: item,
       key: idx
-    }
+    };
+    // or `return item;` it's same.
   },
 
   onClick: function(e) {
@@ -64,7 +60,7 @@ module.exports = React.createClass({
                     href: '#',
                     onClick: that.onClick
                   },
-                  children: that.data.map(that.renderData),
+                  children: that.words.map(that.renderData),
                 }
               },
               {
@@ -86,7 +82,7 @@ module.exports = React.createClass({
 ```
 
 ```
-var rjt = require('lib/rjt');
+var rjt = require('rjt');
 var Header = require('components/header.js');
 
 
@@ -95,12 +91,16 @@ module.exports = {
   props: { className: 'renderer' },
   children: [
     {type: Header}, // You can use component as a type
-    'lorem', // 'you can use string or array as a child.'
+    'Why rjt?', // 'you can use string or array as a child.'
     [
-      'asdasd',
-      'asdasdasd',
-      {type: 'div', children: 'asdasd'}
+      {
+        type: 'div',
+        children: 'rjt is great'
+      },
+      "you don't need jsx",
+      {type: 'div', children: 'Using rjt is pretty easy'}
     ]
   ]
 };
+
 ```

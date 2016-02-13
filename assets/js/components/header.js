@@ -5,12 +5,11 @@ var rjt = require('lib/rjt');
 
 
 module.exports = React.createClass({
-  data: [
-    'lorem',
-    'ipsum',
-    'dolor',
-    'sit',
-    'amet'
+  words: [
+    'How ',
+    'to ',
+    'use ',
+    'rjt',
   ],
 
   renderData: function(item, idx) {
@@ -18,7 +17,7 @@ module.exports = React.createClass({
       type: 'span',
       children: item,
       key: idx
-    }
+    };
   },
 
   onClick: function(e) {
@@ -52,7 +51,7 @@ module.exports = React.createClass({
                     href: '#',
                     onClick: that.onClick
                   },
-                  children: that.data.map(that.renderData),
+                  children: that.words.map(that.renderData),
                 }
               },
               {

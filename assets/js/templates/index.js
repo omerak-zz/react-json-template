@@ -9,11 +9,14 @@ module.exports = {
   props: { className: 'renderer' },
   children: [
     {type: Header},
-    'div',
+    'Why rjt?',
     [
-      'asdasd',
-      'asdasdasd',
-      {type: 'div', children: 'asdasd'}
+      {
+        type: 'div',
+        children: 'rjt is great'
+      },
+      "you don't need jsx",
+      {type: 'div', children: 'Using rjt is pretty easy'}
     ]
   ]
 };
