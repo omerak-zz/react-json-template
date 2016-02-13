@@ -63,11 +63,11 @@ module.exports = {
 
 You can run your static templates just that easy.
 ```
-var RJT = require('lib/ReactJsonTemplater');
+var rjt = require('rjt');
 
 module.exports = React.createClass({
   render: function() {
-    return RJT(require('templates/header.js'));
+    return rjt(require('templates/header.js'));
   }
 });
 ```
@@ -76,7 +76,7 @@ module.exports = React.createClass({
 or in this way or with using mixin you can run your dynamic templates.
 ```
 var React = require('react');
-var RJT = require('lib/ReactJsonTemplater');
+var rjt = require('rjt');
 
 
 module.exports = React.createClass({
@@ -129,7 +129,7 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    return RJT(this.template());
+    return rjt(this.template());
   }
 });
 ```
@@ -137,7 +137,7 @@ module.exports = React.createClass({
 mixin way
 ```
 var React = require('react');
-var RJT = require('lib/ReactJsonTemplater');
+var rjt = require('rjt');
 var headerTemplate = require('templates/header.js');
 
 
@@ -150,7 +150,7 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    return RJT(this.template());
+    return rjt(this.template());
   }
 });
 ```

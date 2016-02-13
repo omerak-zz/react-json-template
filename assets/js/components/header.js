@@ -1,50 +1,23 @@
 'use strict';
 
 var React = require('react');
-var RJT = require('lib/ReactJsonTemplater');
+var rjt = require('lib/rjt');
 
 
 module.exports = React.createClass({
-  template: function() {
-    var that = this;
+  data: [
+    'lorem',
+    'ipsum',
+    'dolor',
+    'sit',
+    'amet'
+  ],
 
+  renderData: function(item, idx) {
     return {
-      type: 'div',
-      props: { className: 'renderer__header' },
-      children: [
-        {
-          type: 'h1',
-          props: { className: 'renderer__title' },
-          children: 'React Json renderer'
-        },
-        {
-          type: 'ul',
-          props: { className: 'renderer__menu' },
-          children: [
-            {
-              type: 'li',
-              props: { className: 'renderer__menu__li' },
-              children: {
-                type: 'a',
-                props: {
-                  href: '#',
-                  onClick: that.onClick
-                },
-                children: 'some menu',
-              }
-            },
-            {
-              type: 'li',
-              props: { className: 'renderer__menu__li' },
-              children: {
-                type: 'a',
-                props: { href: '#' },
-                children: 'some menu 2',
-              }
-            }
-          ]
-        }
-      ]
+      type: 'span',
+      children: item,
+      key: idx
     }
   },
 
@@ -54,6 +27,47 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    return RJT(this.template());
+    var that = this;
+
+    return rjt(
+      {
+        type: 'div',
+        props: { className: 'renderer__header' },
+        children: [
+          {
+            type: 'h1',
+            props: { className: 'renderer__title' },
+            children: 'React Json renderer'
+          },
+          {
+            type: 'ul',
+            props: { className: 'renderer__menu' },
+            children: [
+              {
+                type: 'li',
+                props: { className: 'renderer__menu__li' },
+                children: {
+                  type: 'a',
+                  props: {
+                    href: '#',
+                    onClick: that.onClick
+                  },
+                  children: that.data.map(that.renderData),
+                }
+              },
+              {
+                type: 'li',
+                props: { className: 'renderer__menu__li' },
+                children: {
+                  type: 'a',
+                  props: { href: '#' },
+                  children: 'some menu 2',
+                }
+              }
+            ]
+          }
+        ]
+      }
+    );
   }
 });

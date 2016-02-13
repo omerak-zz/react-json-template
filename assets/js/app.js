@@ -2,8 +2,8 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var RJT = require('lib/ReactJsonTemplater');
+var rjt = require('lib/rjt');
 var template = require('templates/index.js');
 
 
-ReactDOM.render(RJT(template), document.getElementById('js-app'));
+ReactDOM.render(rjt(template), document.getElementById('js-app'));

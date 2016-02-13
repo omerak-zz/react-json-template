@@ -1,8 +1,8 @@
 {
-  "name": "react-json-templater",
+  "name": "rjt",
   "version": "0.0.1",
   "description": "react without jsx. just use javascript.",
-  "main": "assets/js/lib/ReactJsonTemplater.js",
+  "main": "assets/js/lib/rjt.js",
   "dependencies": {
     "react": "^0.14.6",
     "react-dom": "^0.14.6"
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omerak/react-json-renderer.git"
+    "url": "git+https://github.com/omerak/react-json-template.git"
   },
   "keywords": [
     "react",
@@ -29,7 +29,7 @@
   "author": "Omer Ak",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/omerak/react-json-renderer/issues"
+    "url": "https://github.com/omerak/react-json-template/issues"
   },
-  "homepage": "https://github.com/omerak/react-json-renderer#readme"
+  "homepage": "https://github.com/omerak/react-json-template#readme"
 }
