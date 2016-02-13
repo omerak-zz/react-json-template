@@ -3,6 +3,8 @@
 
 You can create your react view without jsx with this tool. It's simply writing html in json.
 
+`npm install rjt --save`
+`var rjt = require('rjt')`
 
 
 # Simple Usage
@@ -12,6 +14,10 @@ Props and children are the same as react.
 
 
 ```
+var React = require('react');
+var rjt = require('rjt');
+
+
 module.exports = React.createClass({
   words: [
     'How ',
