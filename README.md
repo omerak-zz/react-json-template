@@ -8,7 +8,7 @@ You can create your react view without jsx with this tool. It's simply writing h
 `var rjt = require('rjt')`
 
 
-# Simple Usage
+### Simple Usage
 
 You have three optional keys to type. Type, props and children. Type accepts html tags or components.
 Props and children are the same as react.
@@ -98,14 +98,14 @@ module.exports = {
   props: { className: 'renderer' },
   children: [
     {type: Header}, // You can use component as a type
-    'Why rjt?', // 'you can use string or array as a child.'
+    'Another children', // 'you can use string or array as a child.'
     [
       {
         type: 'div',
         children: 'rjt is great'
       },
-      "you don't need jsx",
-      {type: 'div', children: 'Using rjt is pretty easy'}
+      "Another children",
+      {type: 'div', children: 'Another children'}
     ]
   ]
 };
